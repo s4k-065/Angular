@@ -1,0 +1,39 @@
+<!--nav plans-->
+<nav class="navbar  bg-light navbar-light" *ngIf="router.url != '/signin' && router.url != '/'">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink=""><img src="./assets/logo.png" height="35px"></a>
+        <div class="input-group border " style="width: 70%; border-radius: 20px;" *ngIf="router.url == '/plans'">
+            <span class="input-group-text" id="addon-wrapping"
+                style="border: none; border-top-left-radius: 20px; border-bottom-left-radius: 20px; background-color: white;"><i
+                    class="fa fa-search"></i></span>
+            <input type="search" class="form-control" placeholder="Search - plan,company or keyword"
+                style="border: none;">
+            <button class="btn btn-success " type="button" id="button-addon2" style="border-radius: 20px;"><span><i
+                        class="bi bi-search"></i></span> Find Plans</button>
+        </div>
+
+        <a routerLink="../signin"> <button class="btn btn-primary me-5" type="button" style="border-radius: 20px;"
+                *ngIf="router.url == '/plans'">
+                <span><i class="bi bi-person"></i></span>
+                Logout
+            </button></a>
+
+
+
+        <!-- nav details-->
+
+        <a routerLink="../signin"> <button class="btn btn-primary" type="button" style="border-radius: 20px;"
+                *ngIf="router.url == '/details'">
+                <span><i class="bi bi-arrow-90deg-left"></i></span> Back to Home
+            </button></a>
+        <!-- nav cart-->
+
+        <p *ngIf="router.url == '/cart'" style="float: right;"> <a routerLink="" class="btn"><span><i
+                        class="bi bi-layout-text-sidebar-reverse"></i></span> View Plans</a><a routerLink=""
+                class="btn"><span><i class="bi bi-cart-plus"></i></span> Add-ons </a>
+            <a routerLink="../signin"> <button class="btn btn-primary" type="button" style="border-radius: 20px;">
+                    S
+                </button></a>
+        </p>
+    </div>
+</nav>

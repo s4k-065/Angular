@@ -1,0 +1,133 @@
+
+<div class="container-lg " style="margin-left: 25%; margin-top: 5%; max-width: 700px;">
+    <!--Pera-->
+    
+    <h2>The following NPI(s) contain information matching your search criteria.</h2>
+    <p>
+    The NPI Registry Public Search is a free directory of all active National Provider Identifier (NPI) records. CMS
+    National Plan and Provider Enumeration System (NPPES) publishes the parts of the NPI record that have public
+    relevance, including the provider's name, specialty (taxonomy) and practice address. CMS provides this service
+    based on federal law (45 CFR Part 162).
+    </p>
+    <div class="progress" style="width: 100%; height: 10px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:35%"></div>
+    </div>
+
+    <!--alert of address-->
+    <div class="container my-4 p-3" style="border: 1px solid aqua; background-color: aliceblue;">
+        <pre>
+    NPI 1346242500          <span class="bg-white"> TYPE- INDIVIDUAL </span> 
+    NameSUNNY LINNEBUR
+    Primary Taxonomy  Pharmacist
+
+    Primary Practice Address 12850 E MONTVIEW BLVD # V20-2125 12850 E 
+    MONTVIEW BLVD # V20-2125 United States CO - 800452605
+</pre>
+    </div>
+    <!--YES NO DIV-->
+    <div class=" my-4 p-3 shadow-sm " style="height: 100px; border-radius: 10px;">
+        <div style="height: 30vh;">
+            <div class="card-wrap">
+                <div class="p-2">
+                    <h4>Are the above details correct and up to date?</h4>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-primary" name="button" style="width: 25%; margin-right: 5px;"
+                            type="button" onclick="yes()">Yes</button>
+                        <button class="btn btn-outline-danger" name="button" style="width: 25%;" type="button"
+                            onclick="no()">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--yes collapse-->
+    <div id="yescollapse" class="p-3 my-4 shadow" style="border-radius: 10px; display: none;">
+        <h5>Who will be the point of contact for the enrollment process?</h5>
+        <hr>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="rbtn" id="radeoI" onclick="i()">
+            <label class="form-check-label" for="radeoI">
+                I will be the point of contact for all correspondence
+            </label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="rbtn" id="radeoSomeone" onclick="someone()">
+            <label class="form-check-label" for="radeoSomeone">
+                Someone else will be the point of contact on my behalf
+            </label>
+
+
+        </div>
+
+    </div>
+    <!--no collapse-->
+    <div id="nocollapse" class="p-3 my-4" style="display: none;">
+        <br>
+        <div class="alert alert-success" role="alert">
+            <h4>We have added the ‘NPI Update Service’ to your Enrollment Package at no cost. Our Provider Relation
+                Specialist will update your NPI details during onboarding.</h4>
+        </div>
+        <br>
+        <div class=" shadow" style="border-radius: 10px;">
+            <h5>Who will be the point of contact for the enrollment process?</h5>
+            <hr>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="rbtn" id="radeoI" onclick="i()">
+                <label class="form-check-label" for="radeoI">
+                    I will be thw point of contact for all correspondence
+                </label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="rbtn" id="radeoSomeone" onclick="someone()">
+                <label class="form-check-label" for="radeoSomeone">
+                    Someone else will be the point of contact on my behalf
+                </label>
+            </div>
+        </div>
+    </div>
+    <!--contatct me collapse-->
+    <div class="p-3 my-4 shadow" id="Icollapse" style="border-radius: 10px; display: none;">
+        <span style="font-size: larger;">Please enter your email address below:</span><br>
+        <span class="text-secondary" style="font-size: medium;">The email address will also be your login ID
+            to manage your account with us.</span><br>
+        <span class="text-secondary" style="font-size: x-large;">Email Address</span><br>
+        <input type="text border border-bottom" name="email"><br>
+        <span class="text-danger">This Field is Required</span><br>
+        <a routerLink="../plans"> <button class="btn btn-outline-secondary " type="button"
+                style="margin-left:40% ;">Submit</button></a>
+    </div>
+    <!--contact someone else collapse-->
+    <div class="p-3 my-4 shadow" id="Someonecollapse" style="border-radius: 10px; display: none;">
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput">
+                    <label for="floatingInput">First Name</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Last Name</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Phone Number</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Email address</label>
+                </div>
+            </div>
+        </div>
+        <a routerLink="../plans"> <button class="btn btn-outline-secondary " type="button"
+                style="margin-left:40% ;">Submit</button></a>
+    </div>
+</div>

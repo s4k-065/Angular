@@ -1,0 +1,180 @@
+<div class="container-lg p-4">
+    <h1 class="display-6 text-center"><b>Let's Start your Enrollment Journey!</b></h1>
+  </div>
+  <div class="container-lg container2">
+    <h5 class="text-success ">Please select one of the below options:</h5>
+    <div class="container3">
+
+      <!--1st radio btn-->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="btn" id="radio1" onclick="radio1()">
+        <label class="form-check-label" for="radio1">
+          I have an NPI Number.
+        </label>
+
+        <!--collapse-->
+        <div id="collapse1" class="w-50" style="display: none;">
+          <div class="alert alert-success " role="alert">
+            <h6 class="text-success"> If you want to enroll as an individual provider, enter your Provider
+              NPI (also referred to as
+              NPI1) in the field
+              below. If you want to enroll as a Group/Facility, enter your Organizational NPI (also
+              referred
+              to as NPI 2)</h6>
+          </div>
+          <input type="number" placeholder="Enter NPI..." style="text-align: center; width: 100%;" #npi
+            (keyup)="getValue(npi.value)" >
+          <h4 class="text-center text-danger" id="validationError"></h4>
+        </div>
+      </div>
+
+      <!--2nd radio btn-->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="btn" id="radio2" onclick="radio2()">
+        <label class="form-check-label" for="radio2">
+          Lookup NPI Number.
+        </label>
+
+        <!--collapse-->
+        <div id="collapse2" class="w-50" style="display: none;">
+          <div class="alert alert-success" role="alert">
+            <h6 class="text-success"> You can search for your Provider NPI (also referred to as NPI1) or
+              Organizational NPI (also
+              referred to as NPI 2) below.</h6>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="First Name" aria-label="Recipient's username"
+              aria-describedby="button-addon2">
+            <input type="text" class="form-control" placeholder="Last Name" aria-label="Recipient's username"
+              aria-describedby="button-addon2">
+            <input type="text" class="form-control" placeholder="Organization Name" aria-label="Recipient's username"
+              aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-bs-toggle="modal"
+              data-bs-target="#myModal">Search</button>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+
+                    <h4 class="modal-title">Search NPI</h4>
+                    <button type="button" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="First Name">
+                      <input type="text" class="form-control" placeholder="Last Name">
+                      <input type="text" class="form-control" placeholder="city">
+                      <select id="stateSelect" class="form-control" name="state">
+                        <option value="select">Select your state.</option>
+                        <option value="DL">Delhi</option>
+                        <option value="HR">Haryana</option>
+                        <option value="RJ">Rajesthan</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="UK">Uttarakhand</option>
+                        <option value="TN">Tamil Nadu</option>
+                      </select>
+                      <input type="text" class="form-control" placeholder="Postal Code">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2"> <span><i
+                            class="bi bi-search"></i></span></button>
+                    </div>
+                    <div>
+                      <table class="table table-light table-striped ">
+                        <thead>
+                          <tr>
+                            <th scope="col">
+                              <h3>#</h3>
+                            </th>
+                            <th scope="col">
+                              <h3>First Name</h3>
+                            </th>
+                            <th scope="col">
+                              <h3>Last Name</h3>
+                            </th>
+                            <th scope="col">
+                              <h3>NPI</h3>
+                            </th>
+                            <th scope="col">
+                              <h3>Address</h3>
+                            </th>
+                            <th scope="col">
+                              <h3>Action</h3>
+                            </th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>1275535510</td>
+                            <td>3601 N MACGREGOR WAY US TX 770048004</td>
+                            <td> <a routerLink="../details"> <button type="button" class="btn btn-info"
+                                  data-bs-dismiss="modal">Open</button></a></td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mark</td>
+                            <td>LINNEBUR</td>
+                            <td>7548621584</td>
+                            <td>12850 E MONTVIEW BLVD # V20-2125 MAILSTOP C238 US CO 800452605</td>
+                            <td> <a routerLink="../details"> <button type="button" class="btn btn-info"
+                                  data-bs-dismiss="modal">Open</button></a></td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Mark</td>
+                            <td>ZHANG</td>
+                            <td>9548632175</td>
+                            <td>7345 WATSON RD US MO 631194405</td>
+                            <td> <a routerLink="../details"> <button type="button" class="btn btn-info"
+                                  data-bs-dismiss="modal">Open</button></a></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>-->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--3rd radio btn-->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="btn" id="radio3" onclick="radio3()">
+        <label class="form-check-label" for="radio3">
+          Don't have an NPI. I want one.
+        </label>
+
+        <!--collapse-->
+        <div id="collapse3" class="w-50" style="display: none;">
+          <div class="alert alert-success" role="alert">
+            <h6 class="text-success"> We have added the below NPI applications to your enrollment selection
+              package.</h6>
+            <h5 class="text-secondary" style="font-size: 15px;"> Provider NPI (also referred to as NPI1)<br>
+              New Organizational NPI (also referred to as NPI 2)</h5>
+          </div>
+          <a routerLink="../details"> <button class="btn btn-outline-secondary " type="button"
+              style="margin-left:40% ;">Submit</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
